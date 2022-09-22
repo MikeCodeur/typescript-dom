@@ -1,0 +1,27 @@
+{
+  "projectName": "react-module-template",
+  "projectOwner": "mikecodeur",
+  "repoType": "github",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "repoHost": "https://github.com",
+  "contributorsPerLine": 7,
+  "contributors": [
+    {
+      "login": "mikecodeur",
+      "name": "Mike Codeur",
+      "avatar_url": "https://avatars.githubusercontent.com/u/595162?v=4",
+      "profile": "https://mikecodeur.com",
+      "contributions": [
+        "code",
+        "doc",
+        "infra",
+        "test"
+      ]
+    },
+  ],
+  "skipCi": true
+}
