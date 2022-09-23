@@ -3,8 +3,22 @@
 
 // ❌ NE PAS MODIFIER
 // Utilitaire ne faisant pas partie de l'exercice
-import displayText, {init} from './helper/exerciseHelper'
-init()
+import displayText, {initExo2} from './helper/exerciseHelper'
+const divExoName = 'formExoFinal3'
+initExo2(divExoName)
+
+// ✔️ Début de l'exercice
+
+// 🐶 récupurère tous les champs 'input' avec "querySelectorAll"
+// 🤖
+// const inputs
+
+// 🐶 parcours la liste avec foreach
+// 🤖
+// inputs.forEach(el => {
+//   verifie si le type == text
+//   si oui change le type = color
+// })
 
 /*
 eslint

@@ -3,8 +3,16 @@
 
 // ❌ NE PAS MODIFIER
 // Utilitaire ne faisant pas partie de l'exercice
-import displayText, {init} from './helper/exerciseHelper'
-init()
+import displayText, {initExo2} from './helper/exerciseHelper'
+const divExoName = 'formExoFinal3'
+initExo2(divExoName)
+
+const inputs = document.querySelectorAll('input')
+
+inputs.forEach(el => {
+  const type = el.getAttribute('type')
+  if (type === 'text') el.setAttribute('type', 'color')
+})
 
 /*
 eslint

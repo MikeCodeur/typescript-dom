@@ -40,13 +40,71 @@ export const initExo1 = (label = 'formExo') => {
   exoDiv.appendChild(form)
 }
 
-export const initExo2 = () => {
+export const initExo2 = (label = 'formExo') => {
   init()
   const exoDiv = document.getElementById(EXO)
   const form = document.createElement('form')
+  form.setAttribute('id', label)
   const input = document.createElement('input')
   input.setAttribute('type', 'text')
+
+  const button = document.createElement('input')
+  button.setAttribute('type', 'submit')
+  button.value = 'envoyer'
   form.appendChild(input)
+  form.appendChild(button)
+  exoDiv.appendChild(form)
+}
+
+export const initExo4 = (label = 'formExo') => {
+  init()
+  const exoDiv = document.getElementById(EXO)
+  const form = document.createElement('form')
+  form.setAttribute('id', label)
+
+  const _label = document.createElement('label')
+  _label.innerText = 'HTML'
+  _label.setAttribute('for', 'html')
+
+  const html = document.createElement('input')
+  html.setAttribute('type', 'radio')
+  html.setAttribute('id', 'html')
+  html.setAttribute('value', 'HTML')
+  html.setAttribute('name', 'language')
+  const _labelcb = document.createElement('label')
+  _labelcb.innerText = 'CSS'
+  _labelcb.setAttribute('for', 'css')
+  const css = document.createElement('input')
+  css.setAttribute('type', 'radio')
+  css.setAttribute('id', 'css')
+  css.setAttribute('value', 'CSS')
+  css.setAttribute('name', 'language')
+
+  const _labeljs = document.createElement('label')
+  _labeljs.innerText = 'JS'
+  _labeljs.setAttribute('for', 'js')
+  const js = document.createElement('input')
+  js.setAttribute('type', 'radio')
+  js.setAttribute('id', 'js')
+  js.setAttribute('value', 'JS')
+  js.setAttribute('name', 'language')
+
+  const br = document.createElement('br')
+  const button = document.createElement('input')
+  button.setAttribute('type', 'submit')
+  button.value = 'envoyer'
+
+  form.appendChild(html)
+  form.appendChild(_label)
+
+  form.appendChild(css)
+  form.appendChild(_labelcb)
+
+  form.appendChild(js)
+  form.appendChild(_labeljs)
+
+  form.appendChild(br)
+  form.appendChild(button)
   exoDiv.appendChild(form)
 }
 
