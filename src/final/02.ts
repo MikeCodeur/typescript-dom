@@ -1,14 +1,12 @@
+// Les Types de bases
+// http://localhost:3000/alone/final/01.ts
+
+// ❌ NE PAS MODIFIER
+// Utilitaire ne faisant pas partie de l'exercice
 import displayText, {init} from './helper/exerciseHelper'
-import roomHelper, {TEMP_MAX, calculPerimetre} from './helper/roomHelper'
-
 init()
-displayText('Hello World')
 
-let lib = "Air de d'un pièce de 2 par 5 donne " + roomHelper(2, 5)
-displayText(lib)
-
-lib = "Périmètre de d'un pièce de 2 par 5 donne " + calculPerimetre(2, 5)
-displayText(lib)
-
-lib = "La température max d'une pièce est " + TEMP_MAX
-displayText(lib)
+/*
+eslint
+  @typescript-eslint/no-unused-vars: "off"
+*/

@@ -1,13 +1,13 @@
 {
-  "name": "@mikecodeur/react-module-template",
-  "title": "React Module Template",
-  "description": "Module template pour la création future de module de formation",
+  "name": "@mikecodeur/typescript-dom",
+  "title": "TypeScript DOM",
+  "description": "Module : TypeScript DOM - formation TypeScript PRO",
   "author": "Mike Codeur <contact@mikecodeur.com> (https://mikecodeur.com/)",
   "course": "typescript",
   "version": "1.0.0",
   "private": true,
   "keywords": [],
-  "homepage": "https://react-module-template.mikecodeur.com",
+  "homepage": "https://typescript-dom.mikecodeur.com",
   "license": "GPL-3.0-only",
   "main": "src/index.js",
   "engines": {
@@ -23,7 +23,8 @@
     "chalk": "^4.1.1",
     "codegen.macro": "^4.1.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-error-overlay": "6.0.9"
   },
   "devDependencies": {
     "husky": "^4.3.8",
@@ -76,10 +77,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikecodeur/react-module-template.git"
+    "url": "git+https://github.com/mikecodeur/typescript-dom.git"
   },
   "bugs": {
-    "url": "https://github.com/mikecodeur/react-module-template/issues"
+    "url": "https://github.com/mikecodeur/typescript-dom/issues"
   },
   "msw": {
     "workerDirectory": "public"

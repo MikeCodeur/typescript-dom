@@ -1,10 +1,10 @@
 <div>
   <h1 align="center"><a href="https://go.mikecodeur.com/react-mastery">React Module Template 🚀 ReactMastery.Dev</a></h1>
   <strong>
-    Template de module de la formation React Mastery
+    Module : TypeScript DOM - formation TypeScript PRO
   </strong>
   <p>
-    Module de la formation React Mastery. Module Template. 
+    Module : TypeScript DOM - formation TypeScript PRO
   </p>
 
   <a href="https://go.mikecodeur.com/react-mastery">
