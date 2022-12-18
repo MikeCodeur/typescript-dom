@@ -29,7 +29,7 @@ const QCM: Array<IQCMInterface> = [
         answer: '2',
       },
       {
-        question: 'Quelle sera le type de la balise <form></form> ?',
+        question: 'Quel sera le type de la balise <form></form> ?',
         options: ['HTMLElement', 'HTMLFormElement', 'HTMLDivElement'],
         answer: '1',
       },
@@ -46,7 +46,7 @@ const QCM: Array<IQCMInterface> = [
     exerciseTitle: 'Module : QuerySelector - Factory',
     quiz: [
       {
-        question: "Quelle sera le type de .querySelector('form') ?",
+        question: "Quel sera le type de .querySelector('form') ?",
         options: [
           'HTMLFormElement | undefined',
           'HTMLFormElement',
@@ -61,7 +61,7 @@ const QCM: Array<IQCMInterface> = [
     exerciseTitle: 'Module : Les NodeListOf - Generics',
     quiz: [
       {
-        question: "Quelle sera le type de .querySelectorAll('input') ?",
+        question: "Quel sera le type de .querySelectorAll('input') ?",
         options: [
           'HTMLInputElement',
           'NodeListOf<HTMLInputElement>',
@@ -76,7 +76,7 @@ const QCM: Array<IQCMInterface> = [
     exerciseTitle: 'Module : Cloner des nœuds',
     quiz: [
       {
-        question: 'Quelle sera le type de .cloneNode(true) ?',
+        question: 'Quel sera le type de .cloneNode(true) ?',
         options: ['HTMLFormElement | null', 'Node', 'HTMLFormElement'],
         answer: '1',
       },
