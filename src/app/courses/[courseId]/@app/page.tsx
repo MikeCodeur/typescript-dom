@@ -3,7 +3,7 @@ import "@/styles/markdown.css"
 import Course from "../_components/course"
 import { DIRECTORY_PATH } from "@/common/constants"
 
-export default async function Page({
+export default function Page({
   params,
 }: {
   params: {
