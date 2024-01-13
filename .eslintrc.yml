@@ -29,6 +29,7 @@ rules:
   unicorn/prefer-module: off
   unicorn/filename-case: off
   no-console: off
+  no-unused-vars: off
   promise/always-return: error
   promise/no-return-wrap: error
   promise/param-names: error
@@ -42,7 +43,6 @@ rules:
   promise/valid-params: warn
   promise/avoid-new: off
   react/prop-types: off
-  "@typescript-eslint/no-unused-vars": error
 ignorePatterns:
   - src/final
   - src/exercise
