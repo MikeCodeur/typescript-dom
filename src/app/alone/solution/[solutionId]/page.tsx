@@ -1,4 +1,5 @@
 import Content from "@/components/content"
+import { getCurrentDirectory } from "@/lib/helpers"
 import { getSolutionById } from "@/lib/practices/solutions"
 import { notFound } from "next/navigation"
 
@@ -14,9 +15,10 @@ const Page = async ({
   if (!solutionId) {
     notFound()
   }
-  const solution = await getSolutionById(solutionId)
+  const directory = getCurrentDirectory()
+  const solution = await getSolutionById(solutionId, directory)
 
-  return <Content practice={solution} practiceType={"solution"} />
+  return <Content practice={solution} practiceType={"final"} />
 }
 
 export default Page
