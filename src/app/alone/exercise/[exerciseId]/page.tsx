@@ -18,7 +18,13 @@ const Page = async ({
   const directory = getCurrentDirectory()
   const exercice = await getExerciceById(exerciseId, directory)
 
-  return <Content practice={exercice} practiceType={"exercise"} />
+  return (
+    <Content
+      practice={exercice}
+      practiceType={"exercise"}
+      directory={directory}
+    />
+  )
 }
 
 export default Page

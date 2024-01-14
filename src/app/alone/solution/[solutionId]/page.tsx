@@ -18,7 +18,9 @@ const Page = async ({
   const directory = getCurrentDirectory()
   const solution = await getSolutionById(solutionId, directory)
 
-  return <Content practice={solution} practiceType={"final"} />
+  return (
+    <Content practice={solution} practiceType={"final"} directory={directory} />
+  )
 }
 
 export default Page
