@@ -1,42 +1,40 @@
-import { EXERCISE, EXTENSIONS, SOLUTION } from "@/common/constants"
-import Iframe from "@/components/iframe"
-import { Practice, PracticeType } from "@/types/app"
-import Image from "next/image"
+import { APP_DIRECTORY, DIRECTORY_PATH, EXTENSIONS } from "@/common/constants"
 import { ComponentType, JSX } from "react"
+import { Directory, Practice, PracticeType } from "@/types/app"
 
-const getImport = async (practice: Practice, type: PracticeType) => {
-  switch (type) {
-    case EXERCISE: {
-      return await import(`@/exercise/${practice.id}.${practice.extension}`, {
-        with: { type: practice.extension },
-      })
-    }
-    case SOLUTION: {
-      return await import(`@/final/${practice.id}.${practice.extension}`, {
-        with: { type: practice.extension },
-      })
-    }
-  }
+import Iframe from "@/components/iframe"
+import Image from "next/image"
+
+const getPracticeImport = async (
+  practice: Practice,
+  type: PracticeType,
+  directory: Directory
+) => {
+  const pathBase =
+    directory === DIRECTORY_PATH.default ? "" : `${APP_DIRECTORY}/`
+  return await import(
+    `../${pathBase}${type}/${practice.id}.${practice.extension}`
+  )
 }
-
 type ContentProps = {
   practice: Practice
   practiceType: PracticeType
+  directory: Directory
 }
-const Content = async ({ practice, practiceType }: ContentProps) => {
+const Content = async ({ practice, practiceType, directory }: ContentProps) => {
   let RenderByPractice: ComponentType<object> | JSX.Element | string
   switch (practice.extension) {
     case EXTENSIONS.js:
     case EXTENSIONS.ts:
     case EXTENSIONS.jsx:
     case EXTENSIONS.tsx: {
-      const mod = await getImport(practice, practiceType)
+      const mod = await getPracticeImport(practice, practiceType, directory)
       const keysMods = Object.keys(mod)
       RenderByPractice = mod.default ?? mod[keysMods[0]]
       break
     }
     case EXTENSIONS.png: {
-      const mod = await getImport(practice, practiceType)
+      const mod = await getPracticeImport(practice, practiceType, directory)
       const image = mod.default
       RenderByPractice = (
         <Image

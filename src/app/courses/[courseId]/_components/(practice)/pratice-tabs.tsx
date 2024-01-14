@@ -47,7 +47,11 @@ const PracticeTabs = async ({
           <TabsContent value={data.name} key={index}>
             <LinkStandAlone route={newRoute} />
             <div className="w-full lg:max-h-screen lg:overflow-y-scroll">
-              <Content practice={data.practice} practiceType={practiceType} />
+              <Content
+                practice={data.practice}
+                practiceType={practiceType}
+                directory={directory}
+              />
             </div>
           </TabsContent>
         )
