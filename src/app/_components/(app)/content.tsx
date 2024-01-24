@@ -2,7 +2,7 @@ import { APP_DIRECTORY, DIRECTORY_PATH, EXTENSIONS } from "@/common/constants"
 import { ComponentType, JSX } from "react"
 import { Directory, Practice, PracticeType } from "@/types/app"
 
-import Iframe from "@/components/iframe"
+import Iframe from "@/components/app/iframe"
 import Image from "next/image"
 
 const getPracticeImport = async (

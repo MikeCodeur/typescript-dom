@@ -1,6 +1,6 @@
 import { Directory } from "@/types/app"
 import Instruction from "./instruction"
-import Navbar from "@/components/navbar/navbar"
+import Navbar from "@/components/app/navbar/navbar"
 import Practice from "./(practice)/practice"
 import { getInstructions } from "@/lib/instructions"
 import { notFound } from "next/navigation"

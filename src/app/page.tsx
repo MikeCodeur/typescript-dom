@@ -1,5 +1,5 @@
 import Menu from "@/app/_components/(app)/menu"
-import Navbar from "@/components/navbar/navbar"
+import Navbar from "@/components/app/navbar/navbar"
 import { getCurrentDirectory } from "@/lib/helpers"
 import { getInstructions } from "@/lib/instructions"
 
