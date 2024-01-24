@@ -1,4 +1,4 @@
-import Menu from "./_components/menu"
+import Menu from "@/app/_components/(app)/menu"
 import Navbar from "@/components/navbar/navbar"
 import { getCurrentDirectory } from "@/lib/helpers"
 import { getInstructions } from "@/lib/instructions"
