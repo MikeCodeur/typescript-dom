@@ -13,7 +13,7 @@ const getPracticeImport = async (
   const pathBase =
     directory === DIRECTORY_PATH.default ? "" : `${APP_DIRECTORY}/`
   return await import(
-    `../${pathBase}${type}/${practice.id}.${practice.extension}`
+    `../../../${pathBase}${type}/${practice.id}.${practice.extension}`
   )
 }
 type ContentProps = {
