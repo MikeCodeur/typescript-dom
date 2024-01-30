@@ -44,6 +44,4 @@ rules:
   promise/avoid-new: off
   react/prop-types: off
 ignorePatterns:
-  - src/final
-  - src/exercise
-  - src/data.js
+  - src/**/*.js
