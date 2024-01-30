@@ -3,7 +3,7 @@ import { EXERCISE, ROUTES } from "@/common/constants"
 import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs"
 import { getPracticesByIdAndType, getPracticesNames } from "@/lib/helpers"
 
-import Content from "@/components/content"
+import Content from "../content"
 import LinkStandAlone from "../link-standalone"
 import PracticeTrigger from "./practice-tabs-trigger"
 

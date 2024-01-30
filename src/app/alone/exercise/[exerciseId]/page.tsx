@@ -1,4 +1,4 @@
-import Content from "@/components/content"
+import Content from "@/app/_components/(app)/content"
 import { getCurrentDirectory } from "@/lib/helpers"
 import { getExerciceById } from "@/lib/practices/exercices"
 import { notFound } from "next/navigation"

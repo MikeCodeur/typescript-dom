@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card"
 import Course from "./menu-item"
 import { Instruction } from "@/types/app"
 import { MODULE_NAME } from "@/common/constants"
-import ReactIcon from "@/components/react-icon"
+import ReactIcon from "@/components/app/react-icon"
 
 type MenuProps = {
   instructions: Instruction[]

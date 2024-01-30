@@ -2,7 +2,7 @@ import { APP_DIRECTORY, DIRECTORY_PATH, EXTENSIONS } from "@/common/constants"
 import { ComponentType, JSX } from "react"
 import { Directory, Practice, PracticeType } from "@/types/app"
 
-import Iframe from "@/components/iframe"
+import Iframe from "@/components/app/iframe"
 import Image from "next/image"
 
 const getPracticeImport = async (
@@ -13,7 +13,7 @@ const getPracticeImport = async (
   const pathBase =
     directory === DIRECTORY_PATH.default ? "" : `${APP_DIRECTORY}/`
   return await import(
-    `../${pathBase}${type}/${practice.id}.${practice.extension}`
+    `../../../${pathBase}${type}/${practice.id}.${practice.extension}`
   )
 }
 type ContentProps = {

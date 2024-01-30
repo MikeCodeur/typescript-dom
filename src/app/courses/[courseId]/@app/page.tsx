@@ -1,6 +1,6 @@
 import "@/styles/markdown.css"
 
-import Course from "../_components/course"
+import Course from "@/app/_components/(app)/course"
 import { DIRECTORY_PATH } from "@/common/constants"
 
 export default function Page({
