@@ -53,8 +53,9 @@ export const getFileDetails = async (file: string, directory: string) => {
 }
 export const getPracticesById = async (id: string, directory: string) => {
   const practiceFiles = getPracticeFiles(id, directory)
+  const onlyFiles = practiceFiles.filter((file) => file.includes("."))
   const fileDetails = await Promise.all(
-    practiceFiles.map(async (file) => {
+    onlyFiles.map(async (file) => {
       return await getFileDetails(file, directory)
     })
   )

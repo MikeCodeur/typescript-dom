@@ -58,7 +58,7 @@ const Content = async ({ practice, practiceType, directory }: ContentProps) => {
         <iframe srcDoc={RenderByPractice} className="h-screen w-full" />
       )}
       {typeof RenderByPractice === "function" && (
-        <Iframe className="h-screen w-screen">
+        <Iframe className="h-screen w-full">
           <RenderByPractice />
         </Iframe>
       )}
