@@ -1,5 +1,5 @@
-import { APP_DIRECTORY, DIRECTORY_PATH, EXTENSIONS } from "@/common/constants"
 import { ComponentType, JSX } from "react"
+import { DIRECTORY_PATH, EXTENSIONS } from "@/common/constants"
 import { Directory, Practice, PracticeType } from "@/types/app"
 
 import Iframe from "@/components/app/iframe"
@@ -11,7 +11,7 @@ const getPracticeImport = async (
   directory: Directory
 ) => {
   const pathBase =
-    directory === DIRECTORY_PATH.default ? "" : `${APP_DIRECTORY}/`
+    directory === DIRECTORY_PATH.default ? "" : `${DIRECTORY_PATH.app}/`
   return await import(
     `../../../${pathBase}${type}/${practice.id}.${practice.extension}`
   )
