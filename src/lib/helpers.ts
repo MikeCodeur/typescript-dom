@@ -17,7 +17,7 @@ export const getCurrentDirectory = () => {
   const checkAppDirectory = readDirectory(EXERCISE_DIRECTORY.app)
   if (checkAppDirectory.length > 0) return DIRECTORY_PATH.app
 
-  throw new Error("Aucun exercice trouvé. Lancez la commande `course`.")
+  throw new Error("Aucun exercice trouvé. Lancez la commande `course-app`.")
 }
 
 export const addLeadingZero = (number: string) => {

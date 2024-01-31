@@ -11,12 +11,11 @@ export const DIRECTORY_PATH = {
   app: "app",
   default: "default",
 } as const
-export const APP_DIRECTORY = "app/courses/[courseId]/@app" as const
 
 const BASE_DIRECTORY = "src" as const
 
 const PRACTICE_DIRECTORY = {
-  app: `${BASE_DIRECTORY}/${APP_DIRECTORY}`,
+  app: `${BASE_DIRECTORY}/${DIRECTORY_PATH.app}`,
   default: BASE_DIRECTORY,
 } as const
 export const EXERCISE_DIRECTORY = {
