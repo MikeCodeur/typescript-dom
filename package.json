@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "init": "course --react",
+    "init": "npx course --react",
     "lint": "next lint",
     "format": "prettier . --check",
     "format:fix": "prettier . --write",
