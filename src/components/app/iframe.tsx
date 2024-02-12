@@ -19,9 +19,12 @@ const Iframe = ({ children, className, ...props }: IframeProps) => {
     if (headNode) {
       headNode.innerHTML = document.head.innerHTML
     }
-  }, [headNode])
+    if (mountNode) {
+      mountNode.className = className ?? ""
+    }
+  }, [headNode, mountNode, className])
   return (
-    <iframe {...props} ref={setContentRef} className={className}>
+    <iframe {...props} ref={setContentRef} className="h-screen w-full">
       {mountNode && createPortal(children, mountNode)}
     </iframe>
   )
