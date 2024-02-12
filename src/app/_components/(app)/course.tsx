@@ -24,7 +24,7 @@ const Course = async ({ courseId, directory }: CourseProps) => {
         currentInstruction={Number(instruction.id)}
         instructions={instructions}
       />
-      <div className="flex w-full flex-col-reverse lg:flex-row">
+      <div className="flex w-full flex-col-reverse bg-background lg:flex-row">
         <Instruction content={instruction.contents} />
         <Practice id={courseId} directory={directory} />
       </div>

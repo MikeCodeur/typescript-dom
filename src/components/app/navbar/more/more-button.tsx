@@ -33,7 +33,7 @@ const MoreButton = ({ position, instructions, state }: MoreButtonProps) => {
           ) : undefined}
           <Link
             href={`${ROUTES.COURSE}/${newIdCourse}`}
-            className={buttonVariants({ variant: "secondary" })}
+            className={buttonVariants({ variant: "outline" })}
             onClick={() => setCurrent(newIdCourse)}
           >
             <p className="w-28 overflow-hidden truncate text-center">

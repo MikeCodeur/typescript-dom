@@ -9,7 +9,10 @@ const LinkStandAlone = ({ route }: LinkStandAloneProps) => {
   return (
     <Link
       href={route}
-      className={cn(buttonVariants({ variant: "secondary" }), "mb-8")}
+      className={cn(
+        buttonVariants({ variant: "outline" }),
+        "mb-4 mt-8 uppercase"
+      )}
       target="_blank"
     >
       Ouvrir dans un page à part

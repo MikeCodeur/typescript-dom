@@ -21,13 +21,13 @@ const MenuItem = ({ instruction }: MenuItemProps) => {
       </AccordionTrigger>
       <AccordionContent className="flex flex-col gap-8">
         <p className="text-sm lg:text-lg">
-          Instruction : {instruction.description}
+          Exercice : {instruction.description}
         </p>
         <Link
           href={`${ROUTES.COURSE}/${instruction.id}`}
           className={cn(
-            buttonVariants({ variant: "secondary" }),
-            "w-full lg:w-fit lg:self-end"
+            buttonVariants({ variant: "default" }),
+            "w-full uppercase lg:w-fit lg:self-end"
           )}
         >
           Accéder à l&apos;exercice

@@ -46,13 +46,10 @@ const MoreDesktop = ({ instructions, current }: MoreModuleProps) => {
                   <TooltipTrigger>
                     <Circle
                       size={14}
-                      className={cn(
-                        "fill-muted-foreground text-muted-foreground",
-                        {
-                          "fill-primary text-primary":
-                            currentInstruction === id,
-                        }
-                      )}
+                      className={cn("fill-primary text-primary", {
+                        "fill-destructive text-destructive":
+                          currentInstruction === id,
+                      })}
                     />
                   </TooltipTrigger>
                   <TooltipContent>

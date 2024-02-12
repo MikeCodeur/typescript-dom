@@ -17,7 +17,7 @@ type NavbarProps = {
 
 const Navbar = ({ instructions, currentInstruction }: NavbarProps) => {
   return (
-    <div className="flex w-full items-center justify-between border-b px-4 py-2">
+    <div className="flex w-full items-center justify-between border-b bg-background px-4 py-2">
       <Link className="flex flex-row items-center gap-2" href={"/"}>
         <div className="h-8">
           <ReactIcon className="h-full w-full" />

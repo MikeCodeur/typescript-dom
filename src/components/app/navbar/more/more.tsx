@@ -2,8 +2,6 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
@@ -29,11 +27,9 @@ const More = ({ instructions }: MoreProps) => {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
-        <DropdownMenuLabel>Instructions</DropdownMenuLabel>
-        <DropdownMenuSeparator />
         {instructions.map((instruction) => {
           return (
-            <DropdownMenuItem key={instruction.id}>
+            <DropdownMenuItem key={instruction.id} className="p-4">
               <Link
                 href={`${ROUTES.COURSE}/${instruction.id}`}
                 className="text-xs md:text-base"
