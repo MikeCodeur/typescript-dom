@@ -23,7 +23,7 @@ const MoreDesktop = ({ instructions, current }: MoreModuleProps) => {
   const [currentInstruction, setcurrentInstruction] = useState<number>(current)
 
   return (
-    <div className="hidden w-fit items-center gap-x-4 lg:flex lg:flex-row lg:justify-around">
+    <div className="hidden w-fit items-center gap-x-4 lg:flex lg:w-full lg:flex-row lg:justify-between">
       <MoreButton
         state={{
           current: currentInstruction,
