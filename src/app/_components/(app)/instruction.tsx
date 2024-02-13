@@ -3,10 +3,10 @@ type InstructionProps = {
 }
 const Instruction = ({ content }: InstructionProps) => {
   return (
-    <div className="w-full overflow-auto bg-foreground from-background to-foreground  p-2 dark:bg-gradient-to-r lg:h-screen lg:w-1/2 lg:p-8">
+    <div className="w-full overflow-auto bg-foreground from-background to-foreground p-2 dark:bg-gradient-to-r lg:h-screen lg:w-1/2 lg:p-8">
       <div
         dangerouslySetInnerHTML={{ __html: content }}
-        className="prose w-full p-2 pb-16 text-xs dark:prose-invert md:text-sm lg:text-base"
+        className="prose w-full p-2 pb-16 dark:prose-invert"
       />
     </div>
   )

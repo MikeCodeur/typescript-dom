@@ -30,10 +30,7 @@ const More = ({ instructions }: MoreProps) => {
         {instructions.map((instruction) => {
           return (
             <DropdownMenuItem key={instruction.id} className="p-4">
-              <Link
-                href={`${ROUTES.COURSE}/${instruction.id}`}
-                className="text-xs md:text-base"
-              >
+              <Link href={`${ROUTES.COURSE}/${instruction.id}`}>
                 {instruction.title}
               </Link>
             </DropdownMenuItem>

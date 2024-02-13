@@ -28,7 +28,7 @@ const PracticeTrigger = ({ name, icon }: PracticeTriggerProps) => {
     Icon = Server
   }
   return (
-    <TabsTrigger value={name} className="text-sm capitalize lg:text-lg">
+    <TabsTrigger value={name} className="text-base capitalize lg:text-lg">
       <Icon className="mr-1 h-4 w-4 md:mr-2 md:h-6 md:w-6" />
       {name}
     </TabsTrigger>
