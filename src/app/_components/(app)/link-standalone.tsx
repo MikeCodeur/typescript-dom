@@ -11,7 +11,7 @@ const LinkStandAlone = ({ route }: LinkStandAloneProps) => {
       href={route}
       className={cn(
         buttonVariants({ variant: "outline" }),
-        "mb-4 mt-8 uppercase"
+        "mb-4 ml-4 mt-8 uppercase"
       )}
       target="_blank"
     >
