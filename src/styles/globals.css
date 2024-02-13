@@ -36,7 +36,7 @@
     --primary: 215 66% 47%;
     --primary-foreground: 0 0% 100%;
     --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary-foreground: 215.4 16.3% 46.9%;
     --muted: 206 95% 7%;
     --muted-foreground: 0 0% 100%;
     --accent: 217.2 32.6% 17.5%;
@@ -56,4 +56,22 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-secondary-foreground/50;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-destructive;
 }

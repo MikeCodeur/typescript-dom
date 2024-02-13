@@ -9,5 +9,9 @@ export default function CourseLayout(props: {
 }) {
   const directory = getCurrentDirectory()
 
-  return <main className="flex w-full flex-col">{props[directory]}</main>
+  return (
+    <main className="flex h-screen w-full flex-col lg:overflow-y-hidden">
+      {props[directory]}
+    </main>
+  )
 }

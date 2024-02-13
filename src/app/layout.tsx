@@ -24,7 +24,7 @@ export default async function RootLayout({
       <body
         className={cn(
           inter.className,
-          "dark:bg-gradient-to-rlg:overflow-hidden max-h-screen min-w-full overflow-y-scroll bg-foreground from-background to-foreground text-primary-foreground"
+          "max-h-screen w-full bg-foreground from-background to-foreground text-primary-foreground dark:bg-gradient-to-r"
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

@@ -13,9 +13,9 @@ type PracticeProps = {
 const Practice = ({ id, directory }: PracticeProps) => {
   return (
     <div className="flex min-h-fit w-full flex-col lg:w-1/2 lg:overflow-y-hidden">
-      <div className="flex w-full p-2 lg:max-h-screen lg:p-4">
+      <div className="flex w-full lg:max-h-screen">
         <Tabs defaultValue="exercices" className="flex w-full flex-col">
-          <TabsList className="flex h-fit w-fit flex-row gap-2 md:px-2">
+          <TabsList className="ml-4 flex h-fit w-fit flex-row gap-2 md:px-2">
             <PracticeTrigger icon="laptop" name="exercices" />
             <PracticeTrigger icon="check" name="solutions" />
           </TabsList>

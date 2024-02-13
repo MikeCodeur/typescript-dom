@@ -29,7 +29,7 @@ const PracticeTabs = async ({
   const datas = getPracticesNames(name, practices)
   return (
     <Tabs defaultValue={`${name}`} className="flex w-full flex-col">
-      <TabsList className="flex h-fit w-fit flex-wrap justify-evenly gap-x-2">
+      <TabsList className="ml-4 flex h-fit w-fit flex-wrap justify-evenly gap-x-2">
         {datas.map((data) => {
           return (
             <PracticeTrigger
