@@ -57,3 +57,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-secondary-foreground/50;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-destructive;
+}
