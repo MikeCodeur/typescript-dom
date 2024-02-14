@@ -24,6 +24,39 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
+
+    /* markdown */
+    --markdown-font: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    --code-background: 210 22% 93%; /*#f0f0f0*/
+    --pre-color: 243 14% 29%; /*#403f53*/
+    --token-comment-like: 223 14% 65%; /*rgb(152 159 177)*/
+    --token-punctuation: 279 50% 53%; /*rgb(153 76 195)*/
+    --token-property: 279 50% 53%; /*rgb(153 76 195)*/
+    --token-keyword: 279 50% 53%; /*#994cc3*/
+    --token-tag: 279 50% 53%; /*#994cc3*/
+    --token-classname: 1 48% 59%; /*#c96765*/
+    --token-boolean: 0 44% 53%; /*rgb(188 84 84)*/
+    --token-constant: 221 63% 56%; /*rgb(72 118 214)*/
+    --token-deleted: 301 100% 73%; /*#ff73fd*/
+    --token-symbol: 301 100% 73%; /*#ff73fd*/
+    --token-number: 315 90% 35%; /*rgb(170 9 130)*/
+    --token-selector: 279 50% 53%; /*rgb(153 76 195)*/
+    --token-doctype: 279 50% 53%; /*rgb(153 76 195)*/
+    --token-attr-name: 221 63% 56%; /*rgb(72 117 214)*/
+    --token-string: 1 48% 59%; /*#c96765*/
+    --token-char: 221 63% 56%; /*rgb(72 118 214)*/
+    --token-builtin: 221 63% 56%; /*rgb(72 118 214)*/
+    --token-inserted: 221 63% 56%; /*rgb(72 117 214)*/
+    --token-variable: 243 14% 29%; /*rgb(64 63 83)*/
+    --token-operator: 279 50% 53%; /*#994cc3*/
+    --token-entity: 1 48% 59%; /*#c96765*/
+    --token-url: 1 48% 59%; /*#c96765*/
+    --token-language: 1 48% 59%; /*#c96765*/
+    --token-atrule: 1 48% 59%; /*#c96765*/
+    --token-atrr-value: 1 48% 59%; /*#c96765*/
+    --token-function: 221 63% 56%; /*rgb(72 118 214)*/
+    --token-regex: 243 14% 29%; /*rgb(64 63 83)*/
+    --token-important: 243 14% 29%; /*rgb(64, 63, 83)*/
   }
 
   .dark {
@@ -46,6 +79,42 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
+
+    /* markdown */
+    --markdown-font: Inconsolata, Monaco, Consolas, "Courier New", Courier,
+      monospace;
+    --pre-background: 210 6% 12%; /*#1d1f21*/
+    --code-background: 210 6% 12%; /*#1d1f21*/
+    --pre-color: 140 3% 78%; /*#c5c8c6*/
+    --namespace-color: 182 86% 33%; /*rgb(12 150 155)*/
+    --token-comment-like: 0 0% 49%; /*#7c7c7c*/
+    --token-punctuation: 140 3% 78%; /*#c5c8c6*/
+    --token-property: 209 98% 79%; /*#96cbfe*/
+    --token-keyword: 209 98% 79%; /*#96cbfe*/
+    --token-tag: 209 98% 79%; /*#96cbfe*/
+    --token-classname: 60 100% 86%; /*#ffffb6*/
+    --token-boolean: 120 33% 70%; /*#99cc99*/
+    --token-constant: 120 33% 70%; /*#99cc99*/
+    --token-deleted: 301 100% 73%; /*#ff73fd*/
+    --token-symbol: 301 100% 73%; /*#ff73fd*/
+    --token-number: 301 100% 73%; /*rgb(170 9 130)*/
+    --token-selector: 93 100% 69%; /*#a8ff60*/
+    --token-doctype: 0 0% 49%; /*#7c7c7c*/
+    --token-attr-name: 93 100% 69%; /*#a8ff60*/
+    --token-string: 93 100% 69%; /*#a8ff60*/
+    --token-char: 93 100% 69%; /*#a8ff60*/
+    --token-builtin: 93 100% 69%; /*#a8ff60*/
+    --token-inserted: 93 100% 69%; /*#a8ff60*/
+    --token-variable: 241 97% 88%; /*#c6c5fe*/
+    --token-operator: 0 0% 93%; /*#ededed*/
+    --token-entity: 60 100% 86%; /*#ffffb6*/
+    --token-url: 209 98% 79%; /*#96cbfe*/
+    --token-language: 123 33% 65%; /*#87c38a*/
+    --token-atrule: 53 89% 79%; /*#f9ee98*/
+    --token-atrr-value: 53 89% 79%; /*#f9ee98*/
+    --token-function: 53 53% 69%; /*#dad085*/
+    --token-regex: 42 75% 65%; /*#e9c062*/
+    --token-important: 32 98% 56%; /*#fd971f*/
   }
 }
 

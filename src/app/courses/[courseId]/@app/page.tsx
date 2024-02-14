@@ -1,5 +1,3 @@
-import "@/styles/markdown.css"
-
 import Course from "@/app/_components/(app)/course"
 import { DIRECTORY_PATH } from "@/common/constants"
 

@@ -1,5 +1,3 @@
-import "@/styles/markdown.css"
-
 import {
   Accordion,
   AccordionContent,
@@ -38,20 +36,20 @@ const HelpSection = async () => {
             className="bg-background px-4"
             key={info.name}
           >
-            <AccordionTrigger className="flex flex-row justify-between text-sm hover:no-underline lg:text-base">
-              <p>
+            <AccordionTrigger className="flex flex-row text-left text-sm hover:no-underline lg:text-base">
+              <p className="w-1/3">
                 {info.icon} {info.name}
               </p>
-              <p className="text-muted-foreground dark:text-secondary-foreground">
+              <p className="w-2/3 text-muted-foreground dark:text-secondary-foreground">
                 {info.description}
               </p>
             </AccordionTrigger>
-            <AccordionContent className=" flex flex-col gap-4 px-2 md:px-4">
+            <AccordionContent className=" flex w-full flex-col gap-4 px-2 md:px-4">
               <p className="text-base">{info.content}</p>
               {info.code ? (
-                <p
+                <div
                   dangerouslySetInnerHTML={{ __html: info.code }}
-                  className="break-words rounded-md bg-muted-foreground p-2 text-white dark:bg-secondary md:p-4"
+                  className="prose w-full max-w-none dark:prose-invert"
                 />
               ) : undefined}
             </AccordionContent>

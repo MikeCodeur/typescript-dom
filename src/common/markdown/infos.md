@@ -16,7 +16,6 @@
 
   ```javascript
   <!-- 🤖 const element = document.getElementById(id); -->
-
   ```
 
 - icon: "🚀"
@@ -61,7 +60,7 @@
   code:
 
   ```
-      🚨 Erreur de validation du système
+  🚨 Erreur de validation du système
   ```
 
 - icon: "👨‍✈️"
@@ -70,5 +69,5 @@
   content: "Va t'aider sur les spécifications du projet"
   code:
   ```
-    👨‍✈️ Nous souhaitons implémenter la fonctionnalité X et Y
+  👨‍✈️ Nous souhaitons implémenter la fonctionnalité X et Y
   ```
