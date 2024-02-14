@@ -36,11 +36,11 @@ const HelpSection = async () => {
             className="bg-background px-4"
             key={info.name}
           >
-            <AccordionTrigger className="flex flex-row justify-between text-sm hover:no-underline lg:text-base">
-              <p>
+            <AccordionTrigger className="flex flex-row text-left text-sm hover:no-underline lg:text-base">
+              <p className="w-1/3">
                 {info.icon} {info.name}
               </p>
-              <p className="text-muted-foreground dark:text-secondary-foreground">
+              <p className="w-2/3 text-muted-foreground dark:text-secondary-foreground">
                 {info.description}
               </p>
             </AccordionTrigger>
