@@ -17,6 +17,141 @@ const config = {
       },
     },
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            'code[class*="language-"],pre[class*="language-"],': {
+              color: "hsl(var(--pre-color))",
+              fontFamily: "hsl(var(--markdown-font))",
+              direction: "ltr",
+              textAlign: "left",
+              whiteSpace: "pre",
+              wordSpacing: "normal",
+              wordBreak: "normal",
+              lineHeight: "1.5",
+              tabSize: "4",
+              hyphens: "none",
+            },
+            "code,pre": {
+              background: "hsl(var(--code-background))",
+            },
+            /* Code blocks */
+            'pre[class*="language-"]': {
+              padding: "1em",
+              margin: "0.5em 0",
+              overflow: "auto",
+              borderRadius: "0.3rem",
+            },
+            'not(pre) > code[class*="language-"], pre[class*="language-"]': {
+              background: "hsl(var(--code-background))",
+            },
+            /* Inline code */
+            'not(pre) > code[class*="language-"]': {
+              padding: "0.1em",
+              borderRadius: "0.3rem",
+            },
+            ".namespace": {
+              color: "hsl(var(--namespace-color))",
+            },
+            //token
+            ".token.comment,.token.prolog,.token.cdata": {
+              color: "hsl(var(--token-comment-like))",
+            },
+            ".token.doctype": {
+              color: "hsl(var(--token-doctype))",
+            },
+            ".token.punctuation": {
+              color: "hsl(var(--token-punctuation))",
+            },
+            "dark .namespace": {
+              opacity: "0.7",
+            },
+            ".token.property": {
+              color: "hsl(var(--token-property))",
+            },
+            ".token.keyword": {
+              color: "hsl(var(--token-keyword))",
+            },
+            ".token.tag": {
+              color: "hsl(var(--token-tag))",
+            },
+            ".token.class-name": {
+              color: "hsl(var(--token-classname))",
+              textDecoration: "underline",
+            },
+            ".token.boolean": {
+              color: "hsl(var(--token-boolean))",
+            },
+            ".token.constant": {
+              color: "hsl(var(--token-constant))",
+            },
+            ".token.deleted": {
+              color: "hsl(var(--token-deleted))",
+            },
+            ".token.symbol": {
+              color: "hsl(var(--token-symbol))",
+            },
+            ".token.number": {
+              color: "hsl(var(--token-number))",
+            },
+            ".token.selector": {
+              color: "hsl(var(--token-selector))",
+            },
+            ".token.attr-name": {
+              color: "hsl(var(--token-attr-name))",
+            },
+            ".token.string": {
+              color: "hsl(var(--token-string))",
+            },
+            ".token.char": {
+              color: "hsl(var(--token-char))",
+            },
+            ".token.builtin": {
+              color: "hsl(var(--token-builtin))",
+            },
+            ".token.inserted": {
+              color: "hsl(var(--token-inserted))",
+            },
+            ".token.variable": {
+              color: "hsl(var(--token-variable))",
+            },
+            ".token.operator": {
+              color: "hsl(var(--token-operator))",
+            },
+            ".token.entity": {
+              color: "hsl(var(--token-entity))",
+              cursor: "help",
+            },
+            ".token.url": {
+              color: "hsl(var(--token-url))",
+            },
+            ".language-css .token.string, .style .token.string": {
+              color: "hsl(var(--token-language))",
+            },
+            ".token.atrule": {
+              color: "hsl(var(--token-atrule))",
+            },
+            ".token.attr-value": {
+              color: "hsl(var(--token-attr-value))",
+            },
+            ".token.function": {
+              color: "hsl(var(--token-function))",
+            },
+            ".token.regex": {
+              color: "hsl(var(--token-regex))",
+            },
+            ".token.important": {
+              color: "hsl(var(--token-important))",
+            },
+            ".token.bold, .token.important": {
+              fontWeight: "bold",
+            },
+            ".token.italic": {
+              fontStyle: "italic",
+            },
+          },
+        },
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

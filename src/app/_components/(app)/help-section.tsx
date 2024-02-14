@@ -1,5 +1,3 @@
-import "@/styles/markdown.css"
-
 import {
   Accordion,
   AccordionContent,

@@ -1,5 +1,3 @@
-import "@/styles/markdown.css"
-
 import React from "react"
 import { getCurrentDirectory } from "@/lib/helpers"
 
