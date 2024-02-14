@@ -25,31 +25,44 @@ const config = {
               color: "hsl(var(--pre-color))",
               fontWeight: "normal",
             },
-            'code[class*="language-"],pre[class*="language-"],': {
+            'code[class*="language-"],pre[class*="language-"]': {
               fontFamily: "hsl(var(--markdown-font))",
               direction: "ltr",
               textAlign: "left",
-              whiteSpace: "pre-line",
+              whiteSpace: "pre-wrap",
               wordSpacing: "normal",
               wordBreak: "normal",
               lineHeight: "1.5",
+
+              mozTabSize: "4",
+              oTabSize: "4",
               tabSize: "4",
+
+              WebkitHyphens: "none",
+              MozHyphens: "none",
+              msHyphens: "none",
               hyphens: "none",
             },
             /* Code blocks */
+            pre: {
+              padding: "1em",
+              margin: "0.5em 0",
+              overflow: "auto",
+            },
+            "not(pre) > code,pre": {
+              background: "hsl(var(--code-background))",
+              color: "hsl(var(--pre-color))",
+              fontWeight: "normal",
+            },
             'pre[class*="language-"]': {
               padding: "1em",
               margin: "0.5em 0",
               overflow: "auto",
               borderRadius: "0.3rem",
             },
-            ':not(pre) > code[class*="language-"], pre[class*="language-"]': {
-              background: "hsl(var(--code-background))",
-            },
             /* Inline code */
             'not(pre) > code[class*="language-"]': {
-              padding: "0.1em",
-              borderRadius: "0.3rem",
+              background: "hsl(var(--code-background))",
             },
             ".namespace": {
               color: "hsl(var(--namespace-color))",
@@ -78,7 +91,6 @@ const config = {
             },
             ".token.class-name": {
               color: "hsl(var(--token-classname))",
-              textDecoration: "underline",
             },
             ".token.boolean": {
               color: "hsl(var(--token-boolean))",

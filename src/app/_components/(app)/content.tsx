@@ -55,7 +55,7 @@ const Content = async ({ practice, practiceType, directory }: ContentProps) => {
   return (
     <>
       {typeof RenderByPractice === "string" && (
-        <iframe srcDoc={RenderByPractice} className="h-full w-full" />
+        <iframe srcDoc={RenderByPractice} className="h-screen w-full" />
       )}
       {typeof RenderByPractice === "function" && (
         <Iframe className="h-full w-full text-primary-foreground">
