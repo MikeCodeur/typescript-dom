@@ -16,9 +16,9 @@ function getInformationFromHtml(html: string) {
     const name = getMatchRegexInfo("name", obj)
     const description = getMatchRegexInfo("description", obj)
     const content = getMatchRegexInfo("content", obj)
-    const codeRegex = /<code.*?>([\S\s]+?)<\/code>/
+    const codeRegex = /<pre.*?>([\S\s]+?)<\/pre>/
     const match = obj.match(codeRegex)
-    const code = match ? match[1] : undefined
+    const code = match ? match[0] : undefined
 
     return {
       icon,

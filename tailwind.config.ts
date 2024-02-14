@@ -20,20 +20,21 @@ const config = {
       typography: {
         DEFAULT: {
           css: {
-            'code[class*="language-"],pre[class*="language-"],': {
+            "pre,code": {
+              background: "hsl(var(--code-background))",
               color: "hsl(var(--pre-color))",
+              fontWeight: "normal",
+            },
+            'code[class*="language-"],pre[class*="language-"],': {
               fontFamily: "hsl(var(--markdown-font))",
               direction: "ltr",
               textAlign: "left",
-              whiteSpace: "pre",
+              whiteSpace: "pre-line",
               wordSpacing: "normal",
               wordBreak: "normal",
               lineHeight: "1.5",
               tabSize: "4",
               hyphens: "none",
-            },
-            "code,pre": {
-              background: "hsl(var(--code-background))",
             },
             /* Code blocks */
             'pre[class*="language-"]': {
@@ -42,7 +43,7 @@ const config = {
               overflow: "auto",
               borderRadius: "0.3rem",
             },
-            'not(pre) > code[class*="language-"], pre[class*="language-"]': {
+            ':not(pre) > code[class*="language-"], pre[class*="language-"]': {
               background: "hsl(var(--code-background))",
             },
             /* Inline code */

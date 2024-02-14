@@ -44,12 +44,12 @@ const HelpSection = async () => {
                 {info.description}
               </p>
             </AccordionTrigger>
-            <AccordionContent className=" flex flex-col gap-4 px-2 md:px-4">
+            <AccordionContent className=" flex w-full flex-col gap-4 px-2 md:px-4">
               <p className="text-base">{info.content}</p>
               {info.code ? (
-                <p
+                <div
                   dangerouslySetInnerHTML={{ __html: info.code }}
-                  className="break-words rounded-md bg-muted-foreground p-2 text-white dark:bg-secondary md:p-4"
+                  className="prose w-full max-w-none dark:prose-invert"
                 />
               ) : undefined}
             </AccordionContent>
