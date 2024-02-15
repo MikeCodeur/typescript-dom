@@ -24,9 +24,11 @@ const Iframe = ({ children, className, ...props }: IframeProps) => {
     }
   }, [headNode, mountNode, className])
   return (
-    <iframe {...props} ref={setContentRef} className="h-screen w-full">
-      {mountNode && createPortal(children, mountNode)}
-    </iframe>
+    <div className="grid h-auto min-h-[500px] min-w-full overflow-y-auto text-foreground md:h-[calc(100vh-236px)]">
+      <iframe {...props} ref={setContentRef} className="h-full w-full">
+        {mountNode && createPortal(children, mountNode)}
+      </iframe>
+    </div>
   )
 }
 
