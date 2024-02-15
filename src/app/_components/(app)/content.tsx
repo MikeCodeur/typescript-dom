@@ -55,10 +55,12 @@ const Content = async ({ practice, practiceType, directory }: ContentProps) => {
   return (
     <>
       {typeof RenderByPractice === "string" && (
-        <iframe srcDoc={RenderByPractice} className="h-screen w-full" />
+        <div className="grid h-auto min-h-[500px] min-w-full overflow-y-auto text-foreground md:h-[calc(100vh-236px)]">
+          <iframe srcDoc={RenderByPractice} className="h-full w-full" />
+        </div>
       )}
       {typeof RenderByPractice === "function" && (
-        <Iframe className="h-full w-full text-primary-foreground">
+        <Iframe className="prose flex h-full w-full max-w-none flex-col items-center justify-center gap-8 text-primary-foreground">
           <RenderByPractice />
         </Iframe>
       )}
