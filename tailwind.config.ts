@@ -9,6 +9,9 @@ const config = {
     "./src/**/*.{ts,tsx,md}",
   ],
   theme: {
+    fontFamily: {
+      sans: ["var(--font-open-sans)"],
+    },
     container: {
       center: true,
       padding: "2rem",
