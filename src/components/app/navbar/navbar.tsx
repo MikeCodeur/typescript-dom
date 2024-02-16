@@ -2,7 +2,7 @@
 
 import { MODULE_NAME, PERSON_NAME } from "@/common/constants"
 
-import CourseIcon from "../react-icon"
+import CourseIcon from "../course-icon"
 import { Instruction } from "@/types/app"
 import Link from "next/link"
 import { ModeToggle } from "../mode-toggle"
