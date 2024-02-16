@@ -23,13 +23,16 @@ const config = {
       typography: {
         DEFAULT: {
           css: {
+            a: {
+              color: "hsl(var(--link))",
+            },
             "pre,code": {
               background: "hsl(var(--code-background))",
               color: "hsl(var(--pre-color))",
               fontWeight: "normal",
             },
             'code[class*="language-"],pre[class*="language-"]': {
-              fontFamily: "hsl(var(--markdown-font))",
+              fontFamily: "var(--markdown-font)",
               direction: "ltr",
               textAlign: "left",
               whiteSpace: "pre-wrap",
@@ -55,7 +58,11 @@ const config = {
             "not(pre) > code,pre": {
               background: "hsl(var(--code-background))",
               color: "hsl(var(--pre-color))",
-              fontWeight: "normal",
+            },
+            "not(pre) > code": {
+              padding: "0.1em",
+              borderRadius: "0.3em",
+              whiteSpace: "normal",
             },
             'pre[class*="language-"]': {
               padding: "1em",
@@ -79,9 +86,6 @@ const config = {
             },
             ".token.punctuation": {
               color: "hsl(var(--token-punctuation))",
-            },
-            "dark .namespace": {
-              opacity: "0.7",
             },
             ".token.property": {
               color: "hsl(var(--token-property))",
@@ -164,6 +168,24 @@ const config = {
             },
             ".token.italic": {
               fontStyle: "italic",
+            },
+            ".token.selector, .token.doctype, .token.delete, .token.attr-name,.token.inserted":
+              {
+                fontStyle: "italic",
+              },
+          },
+        },
+        invert: {
+          css: {
+            ".token.selector, .token.doctype, .token.delete, .token.attr-name,.token.inserted":
+              {
+                fontStyle: "normal",
+              },
+            ".namespace": {
+              opacity: 0.7,
+            },
+            ".token.class-name": {
+              textDecoration: "underline",
             },
           },
         },

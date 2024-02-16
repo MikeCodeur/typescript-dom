@@ -34,3 +34,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# custom
+/src/app/exercise
+/src/app/final
+/src/exercise
+/src/final
