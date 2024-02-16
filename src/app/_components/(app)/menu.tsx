@@ -2,10 +2,10 @@
 
 import { Accordion } from "@/components/ui/accordion"
 import { Card } from "@/components/ui/card"
+import CourseIcon from "@/components/app/course-icon"
 import { Instruction } from "@/types/app"
 import { MODULE_NAME } from "@/common/constants"
 import MenuItem from "./menu-item"
-import ReactIcon from "@/components/app/react-icon"
 import { useState } from "react"
 
 type MenuProps = {
@@ -20,7 +20,7 @@ const Menu = ({ instructions }: MenuProps) => {
   return (
     <div className="flex w-full flex-col items-center justify-center py-4">
       <div className="flex h-32 w-32 justify-center">
-        <ReactIcon className="h-full w-full" />
+        <CourseIcon className="h-full w-full" />
       </div>
       <h1 className="m-4 py-2 text-xl font-semibold lg:py-6 lg:text-3xl">
         {MODULE_NAME}

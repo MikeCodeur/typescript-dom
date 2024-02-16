@@ -1,4 +1,5 @@
-export const MODULE_NAME = "React Patterns" as const
+export { configModuleName as MODULE_NAME } from ".."
+
 export const PERSON_NAME = "Mike Codeur" as const
 export const EXERCISE = "exercise" as const
 export const SOLUTION = "final" as const
