@@ -2,12 +2,12 @@
 
 import { MODULE_NAME, PERSON_NAME } from "@/common/constants"
 
+import CourseIcon from "../react-icon"
 import { Instruction } from "@/types/app"
 import Link from "next/link"
 import { ModeToggle } from "../mode-toggle"
 import More from "./more/more"
 import MoreDesktop from "./more/more-desktop"
-import ReactIcon from "../react-icon"
 import { cn } from "@/lib/utils"
 
 type NavbarProps = {
@@ -21,7 +21,7 @@ const Navbar = ({ instructions, currentInstruction }: NavbarProps) => {
       <div className="flex w-fit flex-row items-center lg:w-1/2">
         <Link className="flex flex-row items-center gap-2" href={"/"}>
           <div className="h-8">
-            <ReactIcon className="h-full w-full" />
+            <CourseIcon className="h-full w-full" />
           </div>
           <div className="group flex flex-col text-xs sm:text-sm">
             <h1 className="font-bold">{MODULE_NAME}</h1>

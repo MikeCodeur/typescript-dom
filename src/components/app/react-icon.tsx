@@ -1,8 +1,8 @@
 import React from "react"
 
-type ReactIconProps = React.SVGProps<SVGSVGElement>
+type CourseIconProps = React.SVGProps<SVGSVGElement>
 
-const ReactIcon = ({ ...props }: ReactIconProps) => (
+const CourseIcon = ({ ...props }: CourseIconProps) => (
   <svg
     version="1.1"
     viewBox="0 0 426 426"
@@ -30,6 +30,6 @@ const ReactIcon = ({ ...props }: ReactIconProps) => (
     </g>
   </svg>
 )
-ReactIcon.prototype
+CourseIcon.prototype
 
-export default ReactIcon
+export default CourseIcon
