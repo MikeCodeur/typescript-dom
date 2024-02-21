@@ -11,6 +11,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "validate": "npx course validate",
     "init": "npx course --react",
     "lint": "next lint",
     "format": "prettier . --check",
