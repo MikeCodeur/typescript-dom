@@ -1,1 +1,1 @@
-export const configModuleName = "React Prerequis Debutants" as const
+export const configModuleName = "Selectionner un module " as const
