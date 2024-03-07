@@ -1,9 +1,9 @@
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
+import { Button } from "@/components/ui/button"
 import { Instruction } from "@/types/app"
 import Link from "next/link"
 import { ROUTES } from "@/common/constants"
-import { buttonVariants } from "@/components/ui/button"
 
 type MoreButtonProps = {
   position: "left" | "right"
@@ -27,23 +27,23 @@ const MoreButton = ({ position, instructions, state }: MoreButtonProps) => {
   return (
     <div className="flex w-[200px] flex-row items-center justify-center gap-x-2">
       {newCondition ? (
-        <>
+        <Link
+          href={`${ROUTES.COURSE}/${newIdCourse}`}
+          onClick={() => setCurrent(newIdCourse)}
+          className="flex flex-row items-center"
+        >
           {position === "left" ? (
             <ChevronLeft className="text-primary" />
           ) : undefined}
-          <Link
-            href={`${ROUTES.COURSE}/${newIdCourse}`}
-            className={buttonVariants({ variant: "outline" })}
-            onClick={() => setCurrent(newIdCourse)}
-          >
+          <Button variant={"outline"}>
             <p className="w-28 overflow-hidden truncate text-center">
               {instructions[idCourse].title}
             </p>
-          </Link>
+          </Button>
           {position === "right" ? (
             <ChevronRight className="text-primary" />
           ) : undefined}
-        </>
+        </Link>
       ) : undefined}
     </div>
   )

@@ -25,17 +25,31 @@ export const addLeadingZero = (number: string) => {
   return newNumber < 10 ? `0${newNumber}` : number
 }
 
-export const getBonus = (id: string, name: string, options?: string) => {
+export const getBonusOrClasses = (
+  id: string,
+  name: string,
+  options?: string
+) => {
   const bonusRegex = /bonus-(\d+)/
-  const match = id.match(bonusRegex)
+  const bonusMatch = id.match(bonusRegex)
 
   let bonus: string | undefined
-  if (match) {
-    const bonusNumber = match.at(-1)
+  if (bonusMatch) {
+    const bonusNumber = bonusMatch.at(-1)
     bonus = `bonus ${bonusNumber}`
   }
 
-  const newName = bonus ?? name
+  const classesRegex = /(\d+)-classes/
+  const classesMatch = id.match(classesRegex)
+
+  let classes: string | undefined
+  if (classesMatch) {
+    const classesNumber = classesMatch.at(-1)
+    classes = `Exercice classes ${classesNumber}` as const
+  }
+
+  let newName = bonus ?? name
+  newName = classes ?? newName
   if (options) return `${newName} (${options})`
 
   return newName
@@ -74,7 +88,7 @@ export const getPracticesNames = (name: string, practices: Practice[]) => {
       addOption = true
     }
     lastPracticeId = practice.id
-    const value = getBonus(
+    const value = getBonusOrClasses(
       practice.id,
       name,
       addOption ? practice.extension : undefined
