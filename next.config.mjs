@@ -8,7 +8,14 @@ const nextConfig = {
     config.module.rules.push(
       {
         test: /\.html$/i,
-        use: ["html-loader"],
+        use: [
+          {
+            loader: "html-loader",
+            options: {
+              sources: false, // Désactive la gestion des ressources dans les fichiers HTML
+            },
+          },
+        ],
       },
       {
         test: /\.md$/,
