@@ -61,3 +61,5 @@ export const extensions = [
   ...extensionsWithContent,
   ...extensionsWithNoContent,
 ] as const
+
+export const IFRAME_ELEMENT_ID = "exoIframe" as const
