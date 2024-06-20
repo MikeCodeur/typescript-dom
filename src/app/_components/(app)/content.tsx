@@ -1,5 +1,9 @@
 import { ComponentType, JSX } from "react"
-import { DIRECTORY_PATH, EXTENSIONS } from "@/common/constants"
+import {
+  DIRECTORY_PATH,
+  EXTENSIONS,
+  IFRAME_ELEMENT_ID,
+} from "@/common/constants"
 import { Directory, Practice, PracticeType } from "@/types/app"
 
 import Iframe from "@/components/app/iframe"
@@ -56,12 +60,24 @@ const Content = async ({ practice, practiceType, directory }: ContentProps) => {
     <>
       {typeof RenderByPractice === "string" && (
         <div className="grid h-auto min-h-[500px] min-w-full overflow-y-auto text-foreground md:h-[calc(100vh-236px)]">
-          <iframe srcDoc={RenderByPractice} className="h-full w-full" />
+          <div id="root">
+            <div id="exo"></div>
+            <div id="exo_final"></div>
+            <div id="exo_bonus_1"></div>
+          </div>
+          <iframe
+            srcDoc={RenderByPractice}
+            className="h-full w-full"
+            id={IFRAME_ELEMENT_ID}
+          />
         </div>
       )}
       {typeof RenderByPractice === "function" && (
         <Iframe className="prose flex h-full w-full max-w-none flex-col items-center justify-center gap-8 text-primary-foreground">
           <RenderByPractice />
+          <div id="root">
+            <div id="exo"></div>
+          </div>
         </Iframe>
       )}
       {typeof RenderByPractice === "object" && RenderByPractice}
