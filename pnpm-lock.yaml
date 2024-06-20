@@ -89,8 +89,8 @@ dependencies:
 
 devDependencies:
   '@mikecodeur/course-app-cli':
-    specifier: 1.0.6
-    version: 1.0.6
+    specifier: 1.0.11
+    version: 1.0.11
   '@tailwindcss/typography':
     specifier: ^0.5.10
     version: 0.5.10(tailwindcss@3.4.1)
@@ -882,8 +882,8 @@ packages:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  /@mikecodeur/course-app-cli@1.0.6:
-    resolution: {integrity: sha512-9q7Ss2z1x6LNjhh1rwI1ppmv7LSDF4Gkms0kkDuOrC6SlISk2fG3Hvo02NcZEITgZwKJbaUypvcooASPpMPRGg==}
+  /@mikecodeur/course-app-cli@1.0.11:
+    resolution: {integrity: sha512-hRZi0UsLzbuyxsliCNtmcuc4qo+7h7i82eZcus3t/7cjQ8L0aq8wSoDEWQOASjNw4aZMWQ/H0lAbBiPPif3qWA==}
     hasBin: true
     dependencies:
       '@clack/prompts': 0.7.0

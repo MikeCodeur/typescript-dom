@@ -49,7 +49,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@mikecodeur/course-app-cli": "1.0.10",
+    "@mikecodeur/course-app-cli": "1.0.11",
     "@tailwindcss/typography": "^0.5.10",
     "@testing-library/jest-dom": "^6.4.0",
     "@types/node": "^20.11.0",
