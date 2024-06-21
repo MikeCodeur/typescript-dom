@@ -8,6 +8,7 @@ import { Directory, Practice, PracticeType } from "@/types/app"
 
 import Iframe from "@/components/app/iframe"
 import Image from "next/image"
+import { cn } from "@/lib/utils"
 
 const getPracticeImport = async (
   practice: Practice,
@@ -24,8 +25,14 @@ type ContentProps = {
   practice: Practice
   practiceType: PracticeType
   directory: Directory
+  displayAlone?: boolean
 }
-const Content = async ({ practice, practiceType, directory }: ContentProps) => {
+const Content = async ({
+  practice,
+  practiceType,
+  directory,
+  displayAlone = false,
+}: ContentProps) => {
   let RenderByPractice: ComponentType<object> | JSX.Element | string
   switch (practice.extension) {
     case EXTENSIONS.js:
@@ -59,7 +66,12 @@ const Content = async ({ practice, practiceType, directory }: ContentProps) => {
   return (
     <>
       {typeof RenderByPractice === "string" && (
-        <div className="grid h-auto min-h-[500px] min-w-full overflow-y-auto text-foreground md:h-[calc(100vh-236px)]">
+        <div
+          className={cn(
+            "grid h-auto min-h-[auto] min-w-full overflow-y-auto text-foreground",
+            displayAlone ? "md:h-[100vh]" : "md:h-[calc(100vh-236px)]"
+          )}
+        >
           <div id="root">
             <div id="exo"></div>
             <div id="exo_final"></div>
