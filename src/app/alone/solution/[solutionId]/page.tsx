@@ -19,12 +19,7 @@ const Page = async ({
   const solution = await getSolutionById(solutionId, directory)
 
   return (
-    <Content
-      practice={solution}
-      practiceType={"final"}
-      directory={directory}
-      displayAlone={true}
-    />
+    <Content practice={solution} practiceType={"final"} directory={directory} />
   )
 }
 
