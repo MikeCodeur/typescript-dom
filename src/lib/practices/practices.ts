@@ -10,7 +10,10 @@ import path from "node:path"
 
 const getPracticeFiles = (id: string, directory: string) => {
   const fileArray = readDirectory(directory)
-  const newId = addLeadingZero(id)
+  let newId = id
+  if (!id.includes("bonus")) {
+    newId = addLeadingZero(id)
+  }
   const practiceFiles = filterFiles(fileArray, newId)
 
   const practiceFileWithoutMarkdown = filterFiles(
@@ -67,7 +70,11 @@ export const getPracticesById = async (id: string, directory: string) => {
 }
 
 export const getPracticeById = async (id: string, directory: string) => {
-  const practiceFile = getPracticeFiles(id, directory)[0]
+  const practiceFile = getPracticeFiles(id, directory).find((file) => {
+    const regex = new RegExp(`^${id}\\.[^.]+$`)
+    return regex.test(file)
+  })
+  if (!practiceFile) throw new Error(`File not found: ${id}`)
   const fileDetails = await getFileDetails(practiceFile, directory)
 
   return fileDetails
