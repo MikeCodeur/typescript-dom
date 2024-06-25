@@ -1,10 +1,19 @@
 import HelpSection from "./_components/(app)/help-section"
 import Menu from "@/app/_components/(app)/menu"
+import { Metadata } from "next"
 import Navbar from "@/components/app/navbar/navbar"
 import { Suspense } from "react"
 import { getCurrentDirectory } from "@/lib/helpers"
 import { getInstructions } from "@/lib/instructions"
+import { iconUrl } from "@/index"
 
+export const metadata: Metadata = {
+  icons: {
+    icon: {
+      url: iconUrl,
+    },
+  },
+}
 export default async function Home() {
   const directory = getCurrentDirectory()
   const instructions = await getInstructions(directory)

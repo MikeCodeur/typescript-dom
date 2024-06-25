@@ -1,15 +1,9 @@
 import React from "react"
-import { getCurrentDirectory } from "@/lib/helpers"
 
-export default function CourseLayout(props: {
-  app: React.ReactNode
-  default: React.ReactNode
-}) {
-  const directory = getCurrentDirectory()
-
+export default function CourseLayout(props: { children: React.ReactNode }) {
   return (
     <main className="flex h-screen w-full flex-col lg:overflow-y-hidden">
-      {props[directory]}
+      {props.children}
       <div id="root">
         <div id="exo"></div>
         <div id="exo_final"></div>
