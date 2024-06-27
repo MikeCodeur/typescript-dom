@@ -64,11 +64,11 @@ const Content = async ({ practice, practiceType, directory }: ContentProps) => {
             "grid h-auto min-h-[100vh] min-w-full overflow-y-auto text-foreground"
           }
         >
-          <div id="root">
+          {/* <div id="root">
             <div id="exo"></div>
             <div id="exo_final"></div>
             <div id="exo_bonus_1"></div>
-          </div>
+          </div> */}
           <iframe
             srcDoc={RenderByPractice}
             className="h-full w-full"
