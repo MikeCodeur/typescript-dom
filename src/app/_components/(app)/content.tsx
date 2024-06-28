@@ -24,8 +24,14 @@ type ContentProps = {
   practice: Practice
   practiceType: PracticeType
   directory: Directory
+  isFullScreen?: boolean
 }
-const Content = async ({ practice, practiceType, directory }: ContentProps) => {
+const Content = async ({
+  practice,
+  practiceType,
+  directory,
+  isFullScreen = false,
+}: ContentProps) => {
   let RenderByPractice: ComponentType<object> | JSX.Element | string
   switch (practice.extension) {
     case EXTENSIONS.js:
@@ -59,11 +65,7 @@ const Content = async ({ practice, practiceType, directory }: ContentProps) => {
   return (
     <>
       {typeof RenderByPractice === "string" && (
-        <div
-          className={
-            "grid h-auto min-h-[100vh] min-w-full overflow-y-auto text-foreground"
-          }
-        >
+        <div className={"grid h-auto min-h-[100vh] min-w-full overflow-y-auto"}>
           {/* <div id="root">
             <div id="exo"></div>
             <div id="exo_final"></div>
@@ -71,17 +73,21 @@ const Content = async ({ practice, practiceType, directory }: ContentProps) => {
           </div> */}
           <iframe
             srcDoc={RenderByPractice}
-            className="h-full w-full"
+            className="flex h-auto min-h-[100vh] w-full"
             id={IFRAME_ELEMENT_ID}
           />
         </div>
       )}
       {typeof RenderByPractice === "function" && (
-        <Iframe className="prose flex h-full w-full max-w-none flex-col items-center justify-center gap-8 text-primary-foreground">
+        // <Iframe className="h-auto min-h-[100vh] min-w-full overflow-y-auto">
+        <Iframe
+          isFullScreen={isFullScreen}
+          // id={`${practiceType}Iframe`}
+        >
           <RenderByPractice />
-          <div id="root">
+          {/* <div id="root">
             <div id="exo"></div>
-          </div>
+          </div> */}
         </Iframe>
       )}
       {typeof RenderByPractice === "object" && RenderByPractice}
