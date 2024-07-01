@@ -8,3 +8,7 @@
 *.bmp binary
 *.ico binary
 *.svg binary
+*.eot binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
