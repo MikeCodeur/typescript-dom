@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Century Gothic";
+  font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
   src: url("./fonts/Helvetica.ttf");
 }
 @font-face {
-  font-family: "Century Gothic Bold";
+  font-family: "Helvetica Bold";
   font-style: bold;
   font-weight: 700;
   src: url("./fonts/Helvetica-Bold.ttf");
