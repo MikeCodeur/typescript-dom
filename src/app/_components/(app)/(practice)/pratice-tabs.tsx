@@ -6,6 +6,8 @@ import { getPracticesByIdAndType, getPracticesNames } from "@/lib/helpers"
 import Content from "../content"
 import LinkStandAlone from "../link-standalone"
 import PracticeTrigger from "./practice-tabs-trigger"
+import PraticeComment from "./pratice-comment"
+import { getPracticeComment } from "@/lib/practices/practices"
 
 type PracticeTabsProps = {
   id: string
@@ -42,10 +44,18 @@ const PracticeTabs = async ({
       </TabsList>
       {datas.map((data, index) => {
         const newRoute = `${route}/${data.practice.id}`
+        const comment = getPracticeComment(
+          data.practice.id,
+          directory,
+          practiceType
+        )
 
         return (
           <TabsContent value={data.name} key={index}>
-            <LinkStandAlone route={newRoute} />
+            <div className="flex flex-row justify-between p-4">
+              {comment && <PraticeComment text={comment} />}
+              <LinkStandAlone route={newRoute} />
+            </div>
             <div className="w-full lg:max-h-screen lg:overflow-y-scroll">
               <Content
                 practice={data.practice}

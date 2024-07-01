@@ -1,9 +1,18 @@
 import "server-only"
 
-import { ExtensionsWithNoContent, Practice } from "@/types/app"
+import {
+  Directory,
+  ExtensionsWithNoContent,
+  Practice,
+  PracticeType,
+} from "@/types/app"
 import { filterFiles, readDirectory, readFile } from "@/lib/fileUtils"
 
-import { EXTENSIONS, extensionsWithNoContent } from "@/common/constants"
+import {
+  EXTENSIONS,
+  PRACTICE_DIRECTORY,
+  extensionsWithNoContent,
+} from "@/common/constants"
 import { sanitizeHtml } from "@/lib/ast"
 import { addLeadingZero } from "@/lib/helpers"
 import path from "node:path"
@@ -78,4 +87,25 @@ export const getPracticeById = async (id: string, directory: string) => {
   const fileDetails = await getFileDetails(practiceFile, directory)
 
   return fileDetails
+}
+
+export const getPracticeComment = (
+  id: string,
+  directory: Directory,
+  practiceType: PracticeType
+) => {
+  const pathDirectory =
+    `${PRACTICE_DIRECTORY[directory]}/${practiceType}` as const
+  const practiceFile = getPracticeFiles(id, pathDirectory).find((file) => {
+    const regex = new RegExp(`^${id}\\.[^.]+$`)
+    return regex.test(file)
+  })
+
+  if (!practiceFile) throw new Error(`File not found: ${id}`)
+
+  const fileContent = readFile(path.join(pathDirectory, practiceFile))
+  const commentRegex = new RegExp(/\/\/\s*🚀(.*)/, "m")
+  const match = fileContent.match(commentRegex)
+
+  return match ? match[1].trim() : undefined
 }
