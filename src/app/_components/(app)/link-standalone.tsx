@@ -15,7 +15,7 @@ const LinkStandAlone = ({ route }: LinkStandAloneProps) => {
       )}
       target="_blank"
     >
-      Ouvrir dans un page à part
+      Ouvrir dans une page à part
     </Link>
   )
 }
