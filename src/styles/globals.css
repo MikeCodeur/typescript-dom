@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Century Gothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/Helvetica.ttf");
+}
+@font-face {
+  font-family: "Century Gothic Bold";
+  font-style: bold;
+  font-weight: 700;
+  src: url("./fonts/Helvetica-Bold.ttf");
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -24,6 +37,9 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
+
+    --font-helvetica: "Helvetica";
+    --font-helvetica-bold: "Helvetica Bold";
 
     /* markdown */
     --markdown-font: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
@@ -59,6 +75,7 @@
     --token-regex: 243 14% 29%; /*rgb(64 63 83)*/
     --token-important: 243 14% 29%; /*rgb(64, 63, 83)*/
     --link: 221, 63%, 56%;
+    --text: 211, 24%, 17%;
   }
 
   .dark {
@@ -114,7 +131,8 @@
     --token-function: 53 53% 69%; /*#dad085*/
     --token-regex: 42 75% 65%; /*#e9c062*/
     --token-important: 32 98% 56%; /*#fd971f*/
-    --link: 100, 100%, 100%;
+    --link: 216, 100%, 54%;
+    --text: 0, 0%, 100%;
   }
 }
 

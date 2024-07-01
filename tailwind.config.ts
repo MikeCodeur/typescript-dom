@@ -10,7 +10,7 @@ const config = {
   ],
   theme: {
     fontFamily: {
-      sans: ["var(--font-open-sans)"],
+      sans: ["var(--font-helvetica)"],
     },
     container: {
       center: true,
@@ -23,6 +23,29 @@ const config = {
       typography: {
         DEFAULT: {
           css: {
+            "h1,h2,h3": {
+              fontFamily: "var(--font-helvetica-bold)",
+              fontWeight: "700",
+              lineHeight: "1.15",
+            },
+            h1: {
+              fontSize: "2em",
+              margin: "0.67em 0",
+            },
+            h2: {
+              fontSize: "1.5em",
+              margin: "0.83em 0",
+            },
+            h3: {
+              fontSize: "1.17em",
+              margin: "1em 0",
+            },
+            p: {
+              color: "hsl(var(--text))",
+              fontSize: "18px",
+              lineHeight: "1.5",
+              letterSpacing: "0.01em",
+            },
             a: {
               color: "hsl(var(--link))",
             },
@@ -51,9 +74,14 @@ const config = {
             },
             /* Code blocks */
             pre: {
-              padding: "1em",
-              margin: "0.5em 0",
+              padding: "2rem",
+              margin: "0 -2rem",
+              borderRadius: "0",
               overflow: "auto",
+            },
+            code: {
+              padding: "0.1em",
+              borderRadius: "0.3em",
             },
             "not(pre) > code,pre": {
               background: "hsl(var(--code-background))",
@@ -61,14 +89,11 @@ const config = {
             },
             "not(pre) > code": {
               padding: "0.1em",
-              borderRadius: "0.3em",
               whiteSpace: "normal",
             },
             'pre[class*="language-"]': {
-              padding: "1em",
-              margin: "0.5em 0",
+              fontSize: "80%",
               overflow: "auto",
-              borderRadius: "0.3rem",
             },
             /* Inline code */
             'not(pre) > code[class*="language-"]': {
