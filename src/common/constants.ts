@@ -15,7 +15,7 @@ export const DIRECTORY_PATH = {
 
 const BASE_DIRECTORY = "src" as const
 
-const PRACTICE_DIRECTORY = {
+export const PRACTICE_DIRECTORY = {
   app: `${BASE_DIRECTORY}/${DIRECTORY_PATH.app}`,
   default: BASE_DIRECTORY,
 } as const
