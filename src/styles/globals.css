@@ -162,3 +162,28 @@
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-destructive;
 }
+
+.reset-tailwind input,
+.reset-tailwind select,
+.reset-tailwind textarea,
+.reset-tailwind button {
+    all: unset;
+    display: revert;
+    font: revert;
+    color: revert;
+    background: revert;
+    margin: revert;
+    padding: revert;
+    border: revert;
+    box-sizing: revert;
+    appearance: revert;
+}
+.reset-tailwind {
+  all: initial;
+  background-color: white;
+  display: block;
+}
+
+.reset-tailwind > * {
+  all: revert;
+}

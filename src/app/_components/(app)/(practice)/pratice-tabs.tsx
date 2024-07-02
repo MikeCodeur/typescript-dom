@@ -3,7 +3,7 @@ import { EXERCISE, ROUTES } from "@/common/constants"
 import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs"
 import { getPracticesByIdAndType, getPracticesNames } from "@/lib/helpers"
 
-import Content from "../content"
+import Iframe from "@/components/app/iframe"
 import LinkStandAlone from "../link-standalone"
 import PracticeTrigger from "./practice-tabs-trigger"
 import PraticeComment from "./pratice-comment"
@@ -57,11 +57,7 @@ const PracticeTabs = async ({
               <LinkStandAlone route={newRoute} />
             </div>
             <div className="w-full lg:max-h-screen lg:overflow-y-scroll">
-              <Content
-                practice={data.practice}
-                practiceType={practiceType}
-                directory={directory}
-              />
+              <Iframe url={newRoute} />
             </div>
           </TabsContent>
         )

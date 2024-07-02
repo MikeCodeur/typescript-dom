@@ -23,7 +23,6 @@ const Page = async ({
       practice={exercice}
       practiceType={"exercise"}
       directory={directory}
-      isFullScreen={true}
     />
   )
 }
