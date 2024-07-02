@@ -94,8 +94,7 @@ export const getPracticeComment = (
   directory: Directory,
   practiceType: PracticeType
 ) => {
-  const pathDirectory =
-    `${PRACTICE_DIRECTORY[directory]}/${practiceType}` as const
+  const pathDirectory = getDirectoryPath(directory, practiceType)
   const practiceFile = getPracticeFiles(id, pathDirectory).find((file) => {
     const regex = new RegExp(`^${id}\\.[^.]+$`)
     return regex.test(file)
@@ -108,4 +107,13 @@ export const getPracticeComment = (
   const match = fileContent.match(commentRegex)
 
   return match ? match[1].trim() : undefined
+}
+
+export const getDirectoryPath = (
+  directory: Directory,
+  practiceType: PracticeType
+) => {
+  const pathDirectory =
+    `${PRACTICE_DIRECTORY[directory]}/${practiceType}` as const
+  return pathDirectory
 }

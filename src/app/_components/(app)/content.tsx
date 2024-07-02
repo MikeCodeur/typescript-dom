@@ -1,13 +1,9 @@
 import { ComponentType, JSX } from "react"
-import {
-  DIRECTORY_PATH,
-  EXTENSIONS,
-  IFRAME_ELEMENT_ID,
-} from "@/common/constants"
+import { DIRECTORY_PATH, EXTENSIONS } from "@/common/constants"
 import { Directory, Practice, PracticeType } from "@/types/app"
 
-import Iframe from "@/components/app/iframe"
 import Image from "next/image"
+import PracticeContent from "./(practice)/pratice-content"
 
 const getPracticeImport = async (
   practice: Practice,
@@ -24,14 +20,8 @@ type ContentProps = {
   practice: Practice
   practiceType: PracticeType
   directory: Directory
-  isFullScreen?: boolean
 }
-const Content = async ({
-  practice,
-  practiceType,
-  directory,
-  isFullScreen = false,
-}: ContentProps) => {
+const Content = async ({ practice, practiceType, directory }: ContentProps) => {
   let RenderByPractice: ComponentType<object> | JSX.Element | string
   switch (practice.extension) {
     case EXTENSIONS.js:
@@ -62,37 +52,7 @@ const Content = async ({
       break
     }
   }
-  return (
-    <>
-      {typeof RenderByPractice === "string" && (
-        <div className={"grid h-auto min-h-[100vh] min-w-full overflow-y-auto"}>
-          {/* <div id="root">
-            <div id="exo"></div>
-            <div id="exo_final"></div>
-            <div id="exo_bonus_1"></div>
-          </div> */}
-          <iframe
-            srcDoc={RenderByPractice}
-            className="flex h-auto min-h-[100vh] w-full"
-            id={IFRAME_ELEMENT_ID}
-          />
-        </div>
-      )}
-      {typeof RenderByPractice === "function" && (
-        // <Iframe className="h-auto min-h-[100vh] min-w-full overflow-y-auto">
-        <Iframe
-          isFullScreen={isFullScreen}
-          // id={`${practiceType}Iframe`}
-        >
-          <RenderByPractice />
-          {/* <div id="root">
-            <div id="exo"></div>
-          </div> */}
-        </Iframe>
-      )}
-      {typeof RenderByPractice === "object" && RenderByPractice}
-    </>
-  )
+  return <PracticeContent Content={RenderByPractice} />
 }
 
 export default Content
