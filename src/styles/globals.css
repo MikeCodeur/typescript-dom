@@ -163,7 +163,7 @@
   @apply bg-destructive;
 }
 
-.reset-tailwind > * {
+.reset-tailwind * {
   all: revert;
 }
 /* .reset-tailwind input,
