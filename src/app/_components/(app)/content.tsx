@@ -3,7 +3,14 @@ import { DIRECTORY_PATH, EXTENSIONS } from "@/common/constants"
 import { Directory, Practice, PracticeType } from "@/types/app"
 
 import Image from "next/image"
-import PracticeContent from "./(practice)/pratice-content"
+import dynamic from "next/dynamic"
+
+const DynamicComponentWithNoSSR = dynamic(
+  () => import("./(practice)/pratice-content"),
+  {
+    ssr: false,
+  }
+)
 
 const getPracticeImport = async (
   practice: Practice,
@@ -52,7 +59,7 @@ const Content = async ({ practice, practiceType, directory }: ContentProps) => {
       break
     }
   }
-  return <PracticeContent Content={RenderByPractice} />
+  return <DynamicComponentWithNoSSR Content={RenderByPractice} />
 }
 
 export default Content

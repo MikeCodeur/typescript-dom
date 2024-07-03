@@ -20,14 +20,12 @@ const PracticeContent = ({
           "m-0 flex h-auto min-h-[100vh] flex-col items-center justify-center overflow-y-auto bg-white p-0"
         }
       >
-        <div className="reset-tailwind bg-white" id="test">
-          <div id="root">
-            {typeof Content === "string" && (
-              <div dangerouslySetInnerHTML={{ __html: Content }} />
-            )}
-            {typeof Content === "function" && <Content />}
-            {typeof Content === "object" && <>{Content}</>}
-          </div>
+        <div id="root" className="reset-tailwind">
+          {typeof Content === "string" && (
+            <div dangerouslySetInnerHTML={{ __html: Content }} />
+          )}
+          {typeof Content === "function" && <Content />}
+          {typeof Content === "object" && <>{Content}</>}
         </div>
       </div>
     )

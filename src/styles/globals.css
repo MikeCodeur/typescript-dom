@@ -140,9 +140,9 @@
   * {
     @apply border-border;
   }
-  body {
+  /* body {
     @apply bg-background text-foreground;
-  }
+  } */
 }
 
 /* scroll bar */
@@ -163,7 +163,10 @@
   @apply bg-destructive;
 }
 
-.reset-tailwind input,
+.reset-tailwind > * {
+  all: revert;
+}
+/* .reset-tailwind input,
 .reset-tailwind select,
 .reset-tailwind textarea,
 .reset-tailwind button {
@@ -177,13 +180,11 @@
     border: revert;
     box-sizing: revert;
     appearance: revert;
-}
+} */
 .reset-tailwind {
   all: initial;
-  background-color: white;
-  display: block;
+  /* background-color: white; */
+  /* display: block; */
 }
 
-.reset-tailwind > * {
-  all: revert;
-}
+
