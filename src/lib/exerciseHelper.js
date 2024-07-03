@@ -4,6 +4,7 @@
 let isDomReady = false
 const initQueue = []
 const displayTextQueue = []
+
 import { IFRAME_ELEMENT_ID } from "@/common/constants"
 
 //init est appellé uniquement quand le dom est ready
@@ -110,7 +111,7 @@ const waitRootDomReady = async () => {
   onDomReady()
 }
 
-waitRootDomReady()
+// waitRootDomReady()
 
 const getDivExoId = (type) => {
   let divExoId = type === "exo" ? "exo" : "exo_final" //etc ...
