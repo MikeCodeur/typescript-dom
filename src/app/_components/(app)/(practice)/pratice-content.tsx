@@ -17,7 +17,7 @@ const PracticeContent = ({
     isClient && (
       <div
         className={
-          "m-0 flex h-auto min-h-[100vh] w-full flex-col items-center justify-center overflow-y-auto p-0"
+          "m-0 flex h-auto min-h-[100vh] w-full flex-col items-center justify-center overflow-y-auto p-0 bg-white"
         }
       >
         <div
