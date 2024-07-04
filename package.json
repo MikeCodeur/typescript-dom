@@ -46,10 +46,11 @@
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7",
     "unified": "^11.0.4",
+    "warning": "^4.0.3",
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@mikecodeur/course-app-cli": "1.0.12",
+    "@mikecodeur/course-app-cli": "1.0.15",
     "@tailwindcss/typography": "^0.5.10",
     "@testing-library/jest-dom": "^6.4.0",
     "@types/jest": "^29.5.12",
