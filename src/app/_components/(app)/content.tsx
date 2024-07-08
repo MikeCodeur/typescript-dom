@@ -59,7 +59,30 @@ const Content = async ({ practice, practiceType, directory }: ContentProps) => {
       break
     }
   }
-  return <DynamicComponentWithNoSSR Content={RenderByPractice} />
+  let newChildren = getChildrenByType(RenderByPractice)
+  return <DynamicComponentWithNoSSR>{newChildren}</DynamicComponentWithNoSSR>
+}
+
+const getChildrenByType = (
+  Element: ComponentType<object> | JSX.Element | string
+) => {
+  let newChildren
+  switch (typeof Element) {
+    case "string": {
+      newChildren = <div dangerouslySetInnerHTML={{ __html: Element }} />
+      break
+    }
+    case "function": {
+      newChildren = <Element />
+      break
+    }
+    case "object": {
+      newChildren = <>{Element}</>
+      break
+    }
+  }
+
+  return newChildren
 }
 
 export default Content
