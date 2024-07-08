@@ -103,7 +103,22 @@ export const getPracticeComment = (
   if (!practiceFile) throw new Error(`File not found: ${id}`)
 
   const fileContent = readFile(path.join(pathDirectory, practiceFile))
-  const commentRegex = new RegExp(/\/\/\s*🚀(.*)/, "m")
+  const extension = path.extname(practiceFile).split(".")[1]
+  let commentRegex
+
+  switch (extension) {
+    case EXTENSIONS.js:
+    case EXTENSIONS.ts:
+    case EXTENSIONS.jsx:
+    case EXTENSIONS.tsx:
+      commentRegex = new RegExp(/\/\/\s*🚀(.*)/, "m")
+      break
+    case EXTENSIONS.html:
+      commentRegex = new RegExp(/<!--\s*🚀(.*)-->/, "m")
+      break
+  }
+
+  if (!commentRegex) throw new Error(`Extension non supporté: ${extension}`)
   const match = fileContent.match(commentRegex)
 
   return match ? match[1].trim() : undefined
