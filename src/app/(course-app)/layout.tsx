@@ -1,4 +1,4 @@
-import "@/styles/globals.css"
+import "./styles/globals.css"
 
 import { MODULE_NAME } from "@/common/constants"
 import type { Metadata } from "next"
