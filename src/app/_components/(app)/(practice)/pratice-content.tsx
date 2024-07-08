@@ -9,7 +9,7 @@ const PracticeContent = ({ children }: { children: JSX.Element }) => {
     setIsClient(true)
   }, [])
 
-  return isClient && <>{children}</>
+  return isClient && children
 }
 
 export default PracticeContent

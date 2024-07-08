@@ -4,6 +4,7 @@ import { MODULE_NAME } from "@/common/constants"
 import type { Metadata } from "next"
 import React from "react"
 import { ThemeProvider } from "@/components/app/theme-provider"
+import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = {
   title: MODULE_NAME,
@@ -17,7 +18,12 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <body>
+      <body
+        className={cn(
+          "h-auto w-full bg-foreground from-background to-foreground text-primary-foreground dark:bg-gradient-to-r",
+          "course-app"
+        )}
+      >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>

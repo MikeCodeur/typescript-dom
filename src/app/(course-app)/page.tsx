@@ -20,11 +20,7 @@ export default async function Home() {
   const instructions = await getInstructions(directory)
 
   return (
-    <main
-      className={cn(
-        "h-auto w-full bg-foreground from-background to-foreground text-primary-foreground dark:bg-gradient-to-r"
-      )}
-    >
+    <main>
       <div className="flex w-full flex-col items-center pb-16 md:gap-4">
         <Navbar instructions={instructions} />
         <div className="flex w-full flex-col items-center gap-4 md:max-w-[800px]">

@@ -1,12 +1,15 @@
 import type { Config } from "tailwindcss"
 
+import {
+  scopedPreflightStyles,
+  isolateInsideOfContainer,
+} from "tailwindcss-scoped-preflight"
+
 const config = {
   darkMode: ["class"],
-  content: [
-    "./src/components/**/*.{ts,tsx,md}",
-    "./src/app/_components/**/*.{ts,tsx,md}",
-    "./src/app/(course-app)/**/*.{ts,tsx,md}",
-  ],
+  // uniquement pour la compilation de tailwind
+  // n'affecte pas le style par défaut
+  content: ["./src/components/**/*.{ts,tsx,md}", "./src/app/**/*.{ts,tsx,md}"],
   theme: {
     fontFamily: {
       sans: ["var(--font-helvetica)"],
@@ -270,7 +273,14 @@ const config = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("tailwindcss-animate")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("tailwindcss-animate"),
+    // Active le reset de tailwind sur des classes précises.
+    scopedPreflightStyles({
+      isolationStrategy: isolateInsideOfContainer(".course-app"),
+    }),
+  ],
 } satisfies Config
 
 export default config

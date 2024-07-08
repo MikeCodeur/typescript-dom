@@ -69,7 +69,9 @@ const getChildrenByType = (
   let newChildren
   switch (typeof Element) {
     case "string": {
-      newChildren = <div dangerouslySetInnerHTML={{ __html: Element }} />
+      newChildren = (
+        <iframe srcDoc={Element} className="min-h-[100vh] w-full border-none" />
+      )
       break
     }
     case "function": {
