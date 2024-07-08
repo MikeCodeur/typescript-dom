@@ -14,7 +14,12 @@ export default async function AloneLayout({
 }) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <body id="root">{children}</body>
+      <body
+        className="m-0 flex min-h-[100vh] flex-col items-center justify-center overflow-y-auto p-0 lg:overflow-y-hidden"
+        id="root"
+      >
+        {children}
+      </body>
     </html>
   )
 }
