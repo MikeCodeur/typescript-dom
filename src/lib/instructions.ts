@@ -4,6 +4,7 @@ import path from "node:path"
 import { markdownToHtml } from "./ast"
 import { filterFiles, readDirectory, readFile } from "./fileUtils"
 import { addLeadingZero } from "./helpers"
+import * as cheerio from "cheerio"
 
 export const getInstructions = async (
   directory: Directory
@@ -37,13 +38,15 @@ export const getInstructions = async (
 }
 
 export const getTitle = (file: string) => {
-  const title = file.match(/<h1>(.*?)<\/h1>/)?.slice(1, 2)[0]
+  const $ = cheerio.load(file)
+  const title = $("h1").first().text()
   return title ?? "no title"
 }
 
 export const getDescription = (file: string) => {
-  const newFile = file.replace(/💡/iu, "")
-  const description = newFile.match(/<h3>(.*?)<\/h3>/)?.slice(1, 2)[0]
+  const newFile = file.replace(/💡/g, "")
+  const $ = cheerio.load(newFile)
+  const description = $("h3").first().text()
   return description ?? "no description"
 }
 export const getInstructionById = async (id: string, directory: Directory) => {
