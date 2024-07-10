@@ -3,7 +3,8 @@
 
 // ❌ NE PAS MODIFIER
 // Utilitaire ne faisant pas partie de l'exercice
-import displayText, {initExo2} from './helper/exerciseHelper'
+import displayText, { App, initExo2 } from "../lib/exerciseHelper";
+const exercice = () => {
 const divExoName = 'formExoFinal2'
 initExo2(divExoName)
 
@@ -17,3 +18,5 @@ form.appendChild(cb)
 eslint
   @typescript-eslint/no-unused-vars: "off"
 */
+};
+export default () => <App exercice={exercice} />;

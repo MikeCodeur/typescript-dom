@@ -3,7 +3,8 @@
 
 // ❌ NE PAS MODIFIER
 // Utilitaire ne faisant pas partie de l'exercice
-import {initExo4} from './helper/exerciseHelper'
+import displayText, { App, initExo4 } from "../lib/exerciseHelper";
+const exercice = () => {
 const divExoName = 'formExoFinal4'
 initExo4(divExoName)
 
@@ -45,3 +46,5 @@ const exoDiv = document.getElementById('exo')
 eslint
   @typescript-eslint/no-unused-vars: "off"
 */
+};
+export default () => <App exercice={exercice} />;

@@ -2,7 +2,8 @@
 // 🚀 Imbrication de types
 // http://localhost:3000/alone/final/03.bonus-1.js
 
-import displayText, {initExo1} from './helper/exerciseHelper'
+import displayText, { App, initExo1 } from "../lib/exerciseHelper";
+const exercice = () => {
 const divExoName = 'formExoFinalBonus1'
 initExo1(divExoName)
 
@@ -29,3 +30,5 @@ eslint
 eslint
   @typescript-eslint/no-unused-vars: "off"
 */
+};
+export default () => <App exercice={exercice} />;
