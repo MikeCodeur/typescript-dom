@@ -9,6 +9,7 @@ import {
 import { filterFiles, readDirectory, readFile } from "@/lib/fileUtils"
 
 import {
+  EXERCISE,
   EXTENSIONS,
   PRACTICE_DIRECTORY,
   extensionsWithNoContent,
@@ -95,14 +96,16 @@ export const getPracticeComment = (
   practiceType: PracticeType
 ) => {
   const pathDirectory = getDirectoryPath(directory, practiceType)
+  if (pathDirectory.includes(EXERCISE)) return
   const practiceFile = getPracticeFiles(id, pathDirectory).find((file) => {
     const regex = new RegExp(`^${id}\\.[^.]+$`)
     return regex.test(file)
   })
-
   if (!practiceFile) throw new Error(`File not found: ${id}`)
+  if (!practiceFile?.includes("bonus")) return
 
   const fileContent = readFile(path.join(pathDirectory, practiceFile))
+  const lines = fileContent.split("\n").slice(0, 4).join("\n")
   const extension = path.extname(practiceFile).split(".")[1]
   let commentRegex
 
@@ -119,7 +122,7 @@ export const getPracticeComment = (
   }
 
   if (!commentRegex) throw new Error(`Extension non supporté: ${extension}`)
-  const match = fileContent.match(commentRegex)
+  const match = lines.match(commentRegex)
 
   return match ? match[1].trim() : undefined
 }
