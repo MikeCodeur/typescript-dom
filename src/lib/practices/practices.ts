@@ -9,7 +9,6 @@ import {
 import { filterFiles, readDirectory, readFile } from "@/lib/fileUtils"
 
 import {
-  EXERCISE,
   EXTENSIONS,
   PRACTICE_DIRECTORY,
   extensionsWithNoContent,
@@ -96,7 +95,6 @@ export const getPracticeComment = (
   practiceType: PracticeType
 ) => {
   const pathDirectory = getDirectoryPath(directory, practiceType)
-  if (pathDirectory.includes(EXERCISE)) return
   const practiceFile = getPracticeFiles(id, pathDirectory).find((file) => {
     const regex = new RegExp(`^${id}\\.[^.]+$`)
     return regex.test(file)
