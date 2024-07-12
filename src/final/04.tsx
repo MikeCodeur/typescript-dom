@@ -1,3 +1,4 @@
+"use client"
 // Les Types de bases
 // http://localhost:3000/alone/final/01.ts
 
