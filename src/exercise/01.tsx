@@ -4,7 +4,7 @@
 // ❌ NE PAS MODIFIER
 // Utilitaire ne faisant pas partie de l'exercice
 
-import displayText, { App, initExo1 } from "../lib/exerciseHelper";
+import displayText, { App, initExo1 } from "../lib/exerciseHelper"; 
 const exercice = () => {
 const divExoName = 'formExo'
 initExo1(divExoName)
