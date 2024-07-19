@@ -44,5 +44,9 @@ rules:
   promise/valid-params: warn
   promise/avoid-new: off
   react/prop-types: off
+  unicorn/switch-case-braces: off
+  eslint-comments/no-use: off
+  jsx-a11y/alt-text: off
+  @next/next/no-img-element: off
 ignorePatterns:
   - src/**/*.js
