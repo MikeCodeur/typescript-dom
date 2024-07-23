@@ -36,9 +36,8 @@ yarn-error.log*
 next-env.d.ts
 
 # custom
-/src/app/exercise
-/src/app/final
-/src/exercise
-/src/final
-/src/index.ts
-script.js
+# /src/app/exercise
+# /src/app/final
+# /src/exercise
+# /src/final
+# /src/index.ts
