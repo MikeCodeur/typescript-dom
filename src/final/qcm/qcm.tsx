@@ -3,59 +3,83 @@ import React from 'react'
 
 interface IQuestion {
   question: string
-  options:string[]
+  options: string[]
   answer: string
 }
 
 interface IQCMInterface {
   exerciseId: string
-  exerciseTitle : string
+  exerciseTitle: string
   quiz: IQuestion[]
 }
 
 const QCM: Array<IQCMInterface> = [
   {
     exerciseId: 'src/exercise/01.md',
-    exerciseTitle: 'Pas de QCM pour cette section',
+    exerciseTitle: 'Module : Les bases du DOM',
     quiz: [
       {
-        question: "Pas de QCM : Valide simplement cet exercice en cliquant sur Valider puis Valider le QCM",
-        options: ["Validé", "Non validé"],
-        answer: "0"
-      }
+        question:
+          "En typescript quelle est l'interface qui représente le DOM ?",
+        options: [
+          'HTMLDivElement',
+          'HTMLBodyElement',
+          'HTMLElement (HTMLElement: Element)',
+        ],
+        answer: '2',
+      },
+      {
+        question: 'Quel sera le type de la balise <form></form> ?',
+        options: ['HTMLElement', 'HTMLFormElement', 'HTMLDivElement'],
+        answer: '1',
+      },
+      {
+        question:
+          "Le type Event est utilisé lors de la soumission d'un formulaire ?",
+        options: ['Oui', 'Non'],
+        answer: '0',
+      },
     ],
   },
   {
     exerciseId: 'src/exercise/02.md',
-    exerciseTitle: 'Pas de QCM pour cette section',
+    exerciseTitle: 'Module : QuerySelector - Factory',
     quiz: [
       {
-        question: "Pas de QCM : Valide simplement cet exercice en cliquant sur Valider puis Valider le QCM",
-        options: ["Validé", "Non validé"],
-        answer: "0"
-      }
+        question: "Quel sera le type de .querySelector('form') ?",
+        options: [
+          'HTMLFormElement | undefined',
+          'HTMLFormElement',
+          'HTMLFormElement | null',
+        ],
+        answer: '2',
+      },
     ],
   },
   {
     exerciseId: 'src/exercise/03.md',
-    exerciseTitle: 'Pas de QCM pour cette section',
+    exerciseTitle: 'Module : Les NodeListOf - Generics',
     quiz: [
       {
-        question: "Pas de QCM : Valide simplement cet exercice en cliquant sur Valider puis Valider le QCM",
-        options: ["Validé", "Non validé"],
-        answer: "0"
-      }
+        question: "Quel sera le type de .querySelectorAll('input') ?",
+        options: [
+          'HTMLInputElement',
+          'NodeListOf<HTMLInputElement>',
+          'HTMLElement',
+        ],
+        answer: '1',
+      },
     ],
   },
   {
     exerciseId: 'src/exercise/04.md',
-    exerciseTitle: 'Pas de QCM pour cette section',
+    exerciseTitle: 'Module : Cloner des nœuds',
     quiz: [
       {
-        question: "Pas de QCM : Valide simplement cet exercice en cliquant sur Valider puis Valider le QCM",
-        options: ["Validé", "Non validé"],
-        answer: "0"
-      }
+        question: 'Quel sera le type de .cloneNode(true) ?',
+        options: ['HTMLFormElement | null', 'Node', 'HTMLFormElement'],
+        answer: '1',
+      },
     ],
   },
 ]
@@ -63,6 +87,6 @@ const QCM: Array<IQCMInterface> = [
 //export default QCM;
 
 const QcmComponent = () => {
-  return (<>{ JSON.stringify(QCM, null, 2) }</>);
+  return <>{JSON.stringify(QCM, null, 2)}</>
 }
 export default QcmComponent
